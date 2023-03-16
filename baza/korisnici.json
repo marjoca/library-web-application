@@ -1,0 +1,658 @@
+[{
+  "_id": {
+    "$oid": "62c88624351144c2f1993505"
+  },
+  "korime": "bosko",
+  "lozinka": "Bosko55$",
+  "ime": "Bosko",
+  "prezime": "boskovic",
+  "tip": "citalac",
+  "adresa": "kraljice marije 1,beograd",
+  "email": "bosko@gmail.com",
+  "slika": "pexels-david-gonzales-2406949.jpg",
+  "telefon": "+3815555555",
+  "zaduzenja": [
+    {
+      "id": 3,
+      "naziv": "Zlocin i kazna",
+      "autor": [
+        "Fjodor Dostojevski"
+      ],
+      "zanr": [
+        "drama",
+        "klasicna knjizevnost"
+      ],
+      "izdavac": "Bigz",
+      "godina": 2002,
+      "jezik": "srpski",
+      "slika": "zlocinikazna.jpg",
+      "bruzimanja": 20,
+      "ocene": [],
+      "kolicina": 0,
+      "rok": 14,
+      "datumzaduzivanja": {
+        "$date": {
+          "$numberLong": "1661546088656"
+        }
+      },
+      "produzio": false
+    },
+    {
+      "id": 1,
+      "naziv": "Gordost i predrasude",
+      "autor": [
+        "Dzejn Ostin"
+      ],
+      "zanr": [
+        "drama",
+        "klasicna knjizevnost",
+        "biografija"
+      ],
+      "izdavac": "Laguna",
+      "godina": 2000,
+      "jezik": "srpski",
+      "slika": "gordostipredrasude.jpg",
+      "bruzimanja": 21,
+      "ocene": [],
+      "kolicina": 0,
+      "rok": -1,
+      "datumzaduzivanja": {
+        "$date": {
+          "$numberLong": "1661862293182"
+        }
+      },
+      "produzio": false
+    }
+  ],
+  "status": "blokiran",
+  "istorija": [
+    {
+      "id": 6,
+      "naziv": "Čovek po imenu Uve",
+      "autor": [
+        "Fredrik Bakman"
+      ],
+      "zanr": [
+        "komedija"
+      ],
+      "datumzaduzivanja": "2022-08-30T11:51:36.684Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661861257089"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "naziv": "Misli i obogati se",
+      "autor": [
+        "Napoleon Hil"
+      ],
+      "zanr": [
+        "psihologija"
+      ],
+      "datumzaduzivanja": "2022-08-30T11:59:40.639Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661861179098"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "naziv": "Čovek po imenu Uve",
+      "autor": [
+        "Fredrik Bakman"
+      ],
+      "zanr": [
+        "komedija"
+      ],
+      "datumzaduzivanja": "2022-08-30T11:42:49.825Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661859889710"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "naziv": "Gordost i predrasude",
+      "autor": [
+        "Dzejn Ostin"
+      ],
+      "zanr": [
+        "drama",
+        "klasicna knjizevnost",
+        "biografija"
+      ],
+      "datumzaduzivanja": "2022-08-30T11:31:37.620Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661859119305"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "naziv": "Gordost i predrasude",
+      "autor": [
+        "Dzejn Ostin"
+      ],
+      "zanr": [
+        "drama",
+        "klasicna knjizevnost",
+        "biografija"
+      ],
+      "datumzaduzivanja": "2022-08-30T11:22:53.818Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661858665636"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "naziv": "Gordost i predrasude",
+      "autor": [
+        "Dzejn Ostin"
+      ],
+      "zanr": [
+        "drama",
+        "klasicna knjizevnost",
+        "biografija"
+      ],
+      "datumzaduzivanja": "2022-08-29T21:52:50.748Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661858488669"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T20:47:07.906Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661547096655"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T18:50:32.286Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661539874680"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T17:57:53.834Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661538450814"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "naziv": "Gordost i predrasude",
+      "autor": [
+        "Dzejn Ostin"
+      ],
+      "zanr": [
+        "drama",
+        "klasicna knjizevnost",
+        "biografija"
+      ],
+      "datumzaduzivanja": "2022-08-26T11:44:17.150Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661536573019"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T17:54:31.771Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661536546716"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T15:03:01.465Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661526350549"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T15:00:28.893Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661526091419"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T14:55:14.505Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661525732474"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T13:44:02.207Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661521559941"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T13:34:41.337Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661520941061"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T13:12:22.424Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661519890327"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T13:01:55.652Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661518981049"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T12:40:49.326Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661517692669"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T12:34:31.210Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661517326341"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T11:37:40.066Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661513913522"
+        }
+      }
+    }
+  ],
+  "odobreniPredlozi": [
+    "Uznemireni ljudi",
+    "Rat i mir"
+  ],
+  "odobrenaRezervacija": [
+    {
+      "id": 3
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "630163b098398e7b99d2a03f"
+  },
+  "korime": "Dunja",
+  "lozinka": "Dunjica5$$",
+  "ime": "dunja",
+  "prezime": "dunja",
+  "adresa": "grdicka 21,kraljevo",
+  "telefon": "+38162235922",
+  "email": "dunja@gmail.com",
+  "slika": "isewtweetbg.jpg",
+  "tip": "citalac",
+  "zaduzenja": [
+    {
+      "id": 2,
+      "naziv": "Romeo i Julija",
+      "autor": [
+        "Vilijem Šekspir"
+      ],
+      "zanr": [
+        "klasicna knjizevnost",
+        "tragedija"
+      ],
+      "izdavac": "Narodna biblioteka Srbije",
+      "godina": 1997,
+      "jezik": "srpski",
+      "slika": "romeoijulija.jpg",
+      "bruzimanja": 12,
+      "ocene": [],
+      "kolicina": 3,
+      "rok": 14,
+      "datumzaduzivanja": {
+        "$date": {
+          "$numberLong": "1661951900104"
+        }
+      },
+      "produzio": false
+    }
+  ],
+  "istorija": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63029195910f32c6cc4bd62e"
+  },
+  "korime": "admin",
+  "lozinka": "Admin55$",
+  "tip": "administrator"
+},{
+  "_id": {
+    "$oid": "63053f77910f32c6cc4bd63b"
+  },
+  "korime": "moderator",
+  "lozinka": "Moderator55$",
+  "tip": "moderator",
+  "slika": "image (1).jpg"
+},{
+  "_id": {
+    "$oid": "630668b7abe664ac0a42139a"
+  },
+  "korime": "uros",
+  "lozinka": "Uros555$",
+  "ime": "uros",
+  "prezime": "urosevic",
+  "adresa": "uroseva 55, kraljevo",
+  "telefon": "+3816223555",
+  "email": "uros@gmail.com",
+  "slika": "pexels-italo-melo-2379004.jpg",
+  "tip": "citalac",
+  "zaduzenja": [
+    {
+      "id": 3,
+      "naziv": "Zlocin i kazna",
+      "autor": [
+        "Fjodor Dostojevski"
+      ],
+      "zanr": [
+        "drama",
+        "klasicna knjizevnost"
+      ],
+      "izdavac": "Bigz",
+      "godina": 2002,
+      "jezik": "srpski",
+      "slika": "zlocinikazna.jpg",
+      "bruzimanja": 7,
+      "ocene": [],
+      "kolicina": 0,
+      "rok": 14,
+      "datumzaduzivanja": {
+        "$date": {
+          "$numberLong": "1661544867162"
+        }
+      },
+      "produzio": false
+    }
+  ],
+  "istorija": [
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T18:51:14.750Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661540349318"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T18:27:30.943Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661538496248"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T16:37:27.355Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661531915612"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "naziv": "Rat i mir",
+      "autor": [
+        "Lav Nikolajevič Tolstoj"
+      ],
+      "zanr": [
+        "klasicna knjizevnost"
+      ],
+      "datumzaduzivanja": "2022-08-26T15:05:50.621Z",
+      "datumvracanja": {
+        "$date": {
+          "$numberLong": "1661531724403"
+        }
+      }
+    }
+  ],
+  "status": "odblokiran",
+  "__v": 0,
+  "odobrenaRezervacija": [
+    {
+      "id": 3
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "630e2b44dd7fc7e4ee45213d"
+  },
+  "korime": "jovana",
+  "lozinka": "Jovana55$",
+  "ime": "Jovana",
+  "prezime": "Maricic",
+  "adresa": "Grdička 21,Kraljevo",
+  "telefon": "+3815555",
+  "email": "jovanam@gmail.com",
+  "slika": "image (1).jpg",
+  "tip": "citalac",
+  "zaduzenja": [
+    {
+      "id": 6,
+      "naziv": "Čovek po imenu Uve",
+      "autor": [
+        "Fredrik Bakman"
+      ],
+      "zanr": [
+        "komedija"
+      ],
+      "izdavac": "Laguna",
+      "godina": 2018,
+      "jezik": "srpski",
+      "slika": "covekpoimenuuve.jpg",
+      "bruzimanja": 10,
+      "ocene": [],
+      "kolicina": 0,
+      "rok": 14,
+      "datumzaduzivanja": {
+        "$date": {
+          "$numberLong": "1661952017316"
+        }
+      },
+      "produzio": false
+    }
+  ],
+  "istorija": [],
+  "status": "odblokiran",
+  "odobreniPredlozi": [],
+  "odobrenaRezervacija": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630f552d298653a0a82ae137"
+  },
+  "korime": "ksenija",
+  "lozinka": "Ksenija55$",
+  "ime": "Ksenija",
+  "prezime": "ksenic",
+  "adresa": "ivanijeva 33,beograd",
+  "telefon": "+3816223555",
+  "email": "ksenija@gmail.com",
+  "slika": "isewtweetbg.jpg",
+  "tip": "moderator",
+  "zaduzenja": [],
+  "istorija": [],
+  "status": "odblokiran",
+  "odobreniPredlozi": [
+    "Na Drini ćuprija"
+  ],
+  "odobrenaRezervacija": [],
+  "__v": 0
+}]

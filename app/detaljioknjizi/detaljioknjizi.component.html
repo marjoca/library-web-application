@@ -1,0 +1,156 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <p class="naslov">Biblioteka</p>
+                <nav>
+                    <ul id="meni">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+
+                        <li *ngIf="ulogovan"><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/zahtev">Zahtev za dodavanje nove knjige</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil"><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}"
+                        class="profilna"></a>
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+
+    </header>
+    <div class="kontejner">
+        <div class="izabranaknjigaslika">
+            <img src="\assets\profilneslike\{{knjiga.slika}}" class="slika" id="photo">
+
+        </div>
+        <div class="kontejner2" *ngIf="citalac">
+            <div class="stavka">Naziv: {{knjiga.naziv}}</div>
+            <div class="stavka">Autor: {{knjiga.autor}}</div>
+            <div class="stavka">Žanr:
+                <ul>
+                    <li *ngFor="let z of knjiga.zanr">{{z}}</li>
+                </ul>
+            </div>
+            <div class="stavka">Izdavač: {{knjiga.izdavac}}</div>
+            <div class="stavka">Godina: {{knjiga.godina}}</div>
+            <div class="stavka">Jezik: {{knjiga.jezik}}</div>
+            <div class="stavka">Broj knjiga na stanju: {{knjiga.kolicina}}</div>
+            <div class="stavka"><button class="dugme" (click)="zaduzi()" id="disabled" *ngIf="!nemadugme">zaduži
+                    knjigu</button></div>
+            <div class="stavka"><button class="dugme" *ngIf="dugmerezervisi" (click)="rezervisi()">rezerviši</button>
+            </div>
+            <div class="nemozedazaduzi" *ngIf="nemozedazaduzi">Ne možete da zadužite knjigu!</div>
+        </div>
+        <div class="container1" *ngIf="moderator">
+
+            <input type="file" accept="image/*" id="file" (change)="dodajSliku($event)" name="file">
+            <button class="dugmekamerica" (click)="promenisliku()">📷</button>
+            <div class="labelica">naziv knjige:</div>
+            <div class="opisprofila">
+
+                <input class="inputzapromenu" type="text" placeholder="{{knjiga.naziv}}" [(ngModel)]="novNaziv">
+                <button class="dugmezapromenu" (click)="promeninaziv()">&#9998;</button>
+
+            </div>
+            <div class="labelica">autori:</div>
+            <div class="opisprofila">
+
+                <input class="inputzapromenu" type="text" placeholder="{{knjiga.autor}}" [(ngModel)]="novAutor">
+                <button class="dugmezapromenu" (click)="promeniautora()">&#9998;</button>
+            </div>
+            <div class="labelica">žanr:</div>
+            <div class="opisprofila">
+
+                <select [(ngModel)]="novZanr" multiple>
+                    <option value="drama">drama</option>
+                    <option value="naucna fantastika">naučna fantastika</option>
+                    <option value="krimi roman">krimi roman</option>
+                    <option value="detektivski roman">detektivski roman</option>
+                    <option value="klasicna knjizevnost">klasična književnost</option>
+                    <option value="tragedija">tragedija</option>
+                    <option value="psihologija">psihologija</option>
+                    <option value="biografija">biografija</option>
+                    <option value="enciklopedija">enciklopedija</option>
+                    <option value="horor">horor</option>
+                    <option value="poezija">poezija</option>
+                    <option value="triler">triler</option>
+                    <option value="komedija">komedija</option>
+                </select>
+                <button class="dugmezapromenu" (click)="promenizanr()">&#9998;</button>
+            </div>
+            <div class="labelica">izdavač:</div>
+            <div class="opisprofila">
+
+                <input class="inputzapromenu" type="text" placeholder="{{knjiga.izdavac}}" [(ngModel)]="novIzdavac">
+                <button class="dugmezapromenu" (click)="promeniizdavaca()">&#9998;</button>
+            </div>
+            <div class="labelica">godina:</div>
+            <div class="opisprofila">
+
+                <input class="inputzapromenu" type="text" placeholder="{{knjiga.godina}}" [(ngModel)]="novaGodina">
+                <button class="dugmezapromenu" (click)="promenigodinu()">&#9998;</button>
+
+            </div>
+            <div class="labelica">jezik:</div>
+            <div class="opisprofila">
+
+                <input class="inputzapromenu" type="text" placeholder="{{knjiga.jezik}}" [(ngModel)]="novJezik">
+                <button class="dugmezapromenu" (click)="promenijezik()">&#9998;</button>
+            </div>
+            <div class="labelica">broj knjiga na stanju:</div>
+            <div class="opisprofila">
+
+                <input class="inputzapromenu" type="number" placeholder="{{knjiga.kolicina}}"
+                    [(ngModel)]="novaKolicina">
+                <button class="dugmezapromenu" (click)="promenikolicinu()">&#9998;</button>
+            </div>
+
+            <div class="poruka" id="poruka">Ne možete izabrati više od 3 žanra!</div>
+        </div>
+    </div>
+    <div class="recenzijadiv">
+        <div class="zaduzivaoJeOvuKnjigu" *ngIf="prikazi">
+            <label class="labela">Unesite recenziju:</label>
+            <div class="zvezdice" (click)="zvezdice()">
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+            </div>
+            <textarea maxlength="1000" placeholder="Unesite Vašu recenziju..." [(ngModel)]="komentar"></textarea>
+            <button class="recenzijadugme" (click)="dodajRecenziju()" *ngIf="!azuriraj">Dodaj recenziju</button>
+            <button class="recenzijadugme" (click)="azurirajRecenziju()" *ngIf="azuriraj">Ažuriraj recenziju</button>
+        </div>
+        <div class="recenzijecitalaca">
+            <div class="prosecnaocena"><label>Prosečna ocena knjige je: {{prosecnaOcena}}</label></div>
+
+            <table class="tabelaRecenzija">
+                <thead>
+                    <tr>
+                        <th>Čitalac</th>
+                        <th>Ocena</th>
+                        <th>Komentar</th>
+                        <th>Datum i vreme</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+
+                </tbody>
+            </table>
+            <div class="nemaRecenzija" *ngIf="nemaRecenzija">Još uvek nema recenzija za izabranu knjigu!</div>
+        </div>
+
+
+    </div>
+</body>

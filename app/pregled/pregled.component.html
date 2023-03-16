@@ -1,0 +1,48 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a routerLink="/"><p class="naslov">Biblioteka</p></a>
+                <nav>
+                    <ul id="meni">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+    
+                        <li *ngIf="ulogovan" id="promenalozinke"><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan" id="zahtev"><a routerLink="/zahtev">Zahtev za dodavanje nove knjige</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil" ><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}" class="profilna"></a>
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+        
+    </header>
+    <div class="vasazaduzenja">Vaša zaduženja:</div>
+    <div class="zaduzeneknjige" >
+    <table *ngIf="imaknjiga">
+        <tr>
+            <th>Slika</th>
+            <th >Naziv</th>
+            <th >Autor</th>
+            <th >Rok za vraćanje knjige</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let k of zaduzeneKnjige">
+            <td data-th="slika:  "> <img  class="slikaknjige" src="\assets\profilneslike\{{k.slika}}"></td>
+           <td data-th="naziv:  ">{{k.naziv}}</td>
+           <td data-th="autor:  ">{{k.autor}}</td>
+           <td data-th="rok:  " [class.preboji]='k.rok<0'>{{k.rok}}</td>
+           <td *ngIf="!blokiran"><button class="dugme" (click)="detaljiOKnjizi(k)" id="detalji">detalji</button></td>
+           <td ><button class="dugme"(click)="vratiKnjigu(k)">vrati knjigu</button></td>
+           <td *ngIf="!blokiran"><button class="dugme" (click)="produzi(k)" *ngIf="!k.produzio" id="produzi">produži</button></td>
+        </tr>
+    </table>
+    <div  *ngIf="!imaknjiga" class="nemaknjiga">Nemate zaduženih knjiga!</div>
+    </div>
+</body>

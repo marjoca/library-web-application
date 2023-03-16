@@ -1,0 +1,216 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+header{
+    height:50px;
+    background-color: white;
+    border-radius: 8px;
+    
+}
+.container{
+    width:100%;
+   
+    min-height: 100vh;
+    padding-left:3%;
+    padding-right: 3%;
+    padding-top: 10px;
+    box-sizing:border-box;
+    overflow: hidden;
+  
+   
+}
+.navbar{
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+.naslov{
+    width:100px;
+    font-size:20px;
+    cursor:pointer;
+   
+}
+.profilna{
+    width:40px;
+    height: 40px;
+    cursor:pointer;
+    border-radius: 50%;
+    margin-top: 0px;
+}
+
+.menuicon{
+    margin-top:5px;
+    width:40px;
+    cursor:pointer; 
+    display:none;
+}
+nav{
+    flex:1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style:none;
+    display:inline-block;
+    margin-right:30px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#000;
+    font-size: 14px;
+}
+nav ul li a:hover{
+    color:rgb(164, 117, 223);
+    cursor: pointer;
+}
+.red{
+    margin-top: 10px;
+   min-height: 150px;
+    background-color: red;
+}
+p{
+    font-size: 14px;
+   /* margin:15px 0;*/
+    display:inline-block;
+    /*color: #ffffff;*/
+    padding:5px 20px;
+}
+.kontejner{
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    margin-top: 20px;
+    margin-left: 20px;
+    width:400px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+}
+.labelica{
+    font-size: small;
+    letter-spacing: 1px;
+}
+.lozinka{
+    background-color: rgba(255,255,255,0.7);
+    height:30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.lozinka input{
+    height:18px;
+    width:300px;
+}
+.poruka{
+    background-color:#b52d6d;
+    color:#ffffffc2;
+    font-size: small;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    height:25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display:none;
+}
+.dugme{
+    margin-left: 130px;
+    height: 50px;
+    width:140px;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #6f36ff;
+    color:rgba(255, 255, 255, 0.775);
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.dugme:hover{
+    height: 50px;
+    width:140px;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #ffffffd7;
+    color:black;
+    cursor: pointer;
+
+}
+@media only screen and (max-width:700px) {
+    .naslov{
+     width: 60px;
+     font-size: 20px;
+     cursor: pointer;
+     margin-top: 0px;
+    }
+    .header{
+     width:100%;
+ 
+    }
+     .container {
+         width: 326px;
+ 
+         min-height: 100vh;
+         padding-left: 3%;
+         padding-right: 3%;
+         padding-top: 0px;
+         box-sizing: border-box;
+         overflow: hidden;
+ 
+ 
+     }
+ 
+     header {
+         height: 40px;
+         margin-top: 1px;
+     }
+ 
+     nav ul {
+         width: 100%;
+ 
+         border-radius: 8px;
+         background: linear-gradient(#b48fff, #dfd5f8);
+         position: absolute;
+         top: 50px;
+         right: 0;
+         z-index: 2;
+ display:none;
+     }
+ 
+     nav ul li {
+         display: block;
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+ 
+     nav ul li a {
+         color: white;
+     }
+ 
+     .menuicon {
+         margin-top: 2px;
+         width: 40px;
+         cursor: pointer;
+         display: block;
+     }
+ 
+     nav ul li a:hover {
+         color: rgb(164, 117, 223);
+         cursor: pointer;
+     }
+     .kontejner{
+        width:85%;
+        margin-right: 10px;
+        margin-left: 10px;
+     }
+     .lozinka input{
+        width:90%;
+     }
+     .dugme{
+        margin-left: 30%;
+     }
+ }

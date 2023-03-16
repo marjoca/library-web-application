@@ -1,0 +1,369 @@
+[{
+  "_id": {
+    "$oid": "630565cefe0e640c83449358"
+  },
+  "id": 1,
+  "naziv": "Gordost i predrasude",
+  "autor": [
+    "Dzejn Ostin"
+  ],
+  "zanr": [
+    "drama",
+    "klasicna knjizevnost",
+    "biografija"
+  ],
+  "izdavac": "Laguna",
+  "godina": 2000,
+  "jezik": "srpski",
+  "slika": "gordostipredrasude.jpg",
+  "ocene": [],
+  "recenzije": [
+    {
+      "korime": "bosko",
+      "ocena": 4,
+      "komentar": "super je knjigs",
+      "datumivreme": {
+        "$date": {
+          "$numberLong": "1661809979995"
+        }
+      }
+    }
+  ],
+  "zaduzenaOdStrane": [
+    {
+      "korime": "bosko"
+    }
+  ],
+  "__v": 0,
+  "bruzimanja": 20,
+  "kolicina": 5,
+  "rezervacije": []
+},{
+  "_id": {
+    "$oid": "630566cb0b1ead99c0a532bd"
+  },
+  "id": 2,
+  "naziv": "Romeo i Julija",
+  "autor": [
+    "Vilijem Šekspir"
+  ],
+  "zanr": [
+    "klasicna knjizevnost",
+    "tragedija"
+  ],
+  "izdavac": "Narodna biblioteka Srbije",
+  "godina": 1997,
+  "jezik": "srpski",
+  "slika": "romeoijulija.jpg",
+  "ocene": [],
+  "recenzije": [
+    {
+      "korime": "bosko",
+      "ocena": 9,
+      "komentar": "tuzna knjiga",
+      "datumivreme": {
+        "$date": {
+          "$numberLong": "1661443199965"
+        }
+      }
+    }
+  ],
+  "zaduzenaOdStrane": [
+    {
+      "korime": "Dunja"
+    }
+  ],
+  "__v": 0,
+  "kolicina": 3,
+  "bruzimanja": 12
+},{
+  "_id": {
+    "$oid": "630569776aaa70a065bf7455"
+  },
+  "id": 3,
+  "naziv": "Zlocin i kazna",
+  "autor": [
+    "Fjodor Dostojevski"
+  ],
+  "zanr": [
+    "drama",
+    "klasicna knjizevnost"
+  ],
+  "izdavac": "Bigz",
+  "godina": 2002,
+  "jezik": "srpski",
+  "slika": "zlocinikazna.jpg",
+  "ocene": [],
+  "recenzije": [
+    {
+      "korime": "bosko",
+      "ocena": 4,
+      "komentar": "ok",
+      "datumivreme": {
+        "$date": {
+          "$numberLong": "1661547737126"
+        }
+      }
+    }
+  ],
+  "zaduzenaOdStrane": [],
+  "__v": 0,
+  "kolicina": 0,
+  "bruzimanja": 21,
+  "rezervacije": []
+},{
+  "_id": {
+    "$oid": "6306ae0144cd06d09ea88f0e"
+  },
+  "id": 6,
+  "naziv": "Čovek po imenu Uve",
+  "autor": [
+    "Fredrik Bakman"
+  ],
+  "zanr": [
+    "komedija"
+  ],
+  "izdavac": "Laguna",
+  "godina": 2018,
+  "jezik": "srpski",
+  "slika": "covekpoimenuuve.jpg",
+  "ocene": [],
+  "recenzije": [
+    {
+      "korime": "bosko",
+      "ocena": 7,
+      "komentar": "dobra knjiga",
+      "datumivreme": {
+        "$date": {
+          "$numberLong": "1661904604866"
+        }
+      }
+    },
+    {
+      "korime": "sasa",
+      "ocena": 2,
+      "komentar": "ok2 **ažurirano**",
+      "datumivreme": {
+        "$date": {
+          "$numberLong": "1661864294691"
+        }
+      }
+    }
+  ],
+  "zaduzenaOdStrane": [
+    {
+      "korime": "jovana"
+    }
+  ],
+  "__v": 0,
+  "bruzimanja": 10,
+  "kolicina": 0,
+  "rezervacije": [
+    {
+      "korime": "bosko"
+    },
+    {
+      "korime": "ksenija"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6306ae7f44cd06d09ea88f11"
+  },
+  "id": 7,
+  "naziv": "Misli i obogati se",
+  "autor": [
+    "Napoleon Hil"
+  ],
+  "zanr": [
+    "psihologija"
+  ],
+  "izdavac": "Vulkan",
+  "godina": 2020,
+  "jezik": "srpski",
+  "slika": "misliiobogatise.jpg",
+  "ocene": [],
+  "recenzije": [
+    {
+      "korime": "bosko",
+      "ocena": 4,
+      "komentar": "jako poučna knjiga **ažurirano**",
+      "datumivreme": {
+        "$date": {
+          "$numberLong": "1661905566942"
+        }
+      }
+    }
+  ],
+  "zaduzenaOdStrane": [],
+  "__v": 0,
+  "kolicina": 2,
+  "bruzimanja": 9,
+  "rezervacije": []
+},{
+  "_id": {
+    "$oid": "6306c3ebb11911b48fd612b4"
+  },
+  "id": 8,
+  "naziv": "Uznemireni ljudi",
+  "autor": [
+    "Fredrik Bekman"
+  ],
+  "zanr": [
+    "krimi roman",
+    "komedija"
+  ],
+  "izdavac": "Laguna",
+  "godina": 2021,
+  "jezik": "srpski",
+  "slika": "uznemireniljudi.jpg",
+  "ocene": [],
+  "recenzije": [],
+  "zaduzenaOdStrane": [],
+  "__v": 0,
+  "kolicina": 5,
+  "bruzimanja": 3
+},{
+  "_id": {
+    "$oid": "63079d7f8d21369283ccd810"
+  },
+  "id": 9,
+  "naziv": "Rat i mir",
+  "autor": [
+    "Lav Nikolajevič Tolstoj",
+    "Jovana Maricic"
+  ],
+  "zanr": [
+    "klasicna knjizevnost"
+  ],
+  "izdavac": "Laguna",
+  "godina": 1998,
+  "jezik": "srpski",
+  "slika": "ratimir.png",
+  "ocene": [],
+  "recenzije": [
+    {
+      "korime": "bosko",
+      "ocena": 9,
+      "komentar": "jako poučna knjiga **ažurirano**",
+      "datumivreme": {
+        "$date": {
+          "$numberLong": "1661905773480"
+        }
+      }
+    }
+  ],
+  "zaduzenaOdStrane": [],
+  "__v": 0,
+  "kolicina": 1,
+  "bruzimanja": 38,
+  "rezervacije": []
+},{
+  "_id": {
+    "$oid": "630f5b37298653a0a82ae155"
+  },
+  "id": 10,
+  "naziv": "Misteriozna afera",
+  "autor": [
+    "Agata Kristi"
+  ],
+  "zanr": [
+    "krimi roman",
+    "detektivski roman"
+  ],
+  "izdavac": "Laguna",
+  "godina": 2016,
+  "jezik": "srpski",
+  "slika": "agatakristi1.jpg",
+  "ocene": [],
+  "recenzije": [],
+  "zaduzenaOdStrane": [],
+  "rezervacije": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630f5bc0298653a0a82ae159"
+  },
+  "id": 11,
+  "naziv": "Smrt na Nilu",
+  "autor": [
+    "Agata Kristi"
+  ],
+  "zanr": [
+    "krimi roman",
+    "detektivski roman"
+  ],
+  "izdavac": "Laguna",
+  "godina": 2017,
+  "jezik": "srpski",
+  "slika": "agatakristi2.jpg",
+  "ocene": [],
+  "recenzije": [],
+  "zaduzenaOdStrane": [],
+  "rezervacije": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630f5c01298653a0a82ae15d"
+  },
+  "id": 12,
+  "naziv": "Ana Karenjina",
+  "autor": [
+    "Tolstoj"
+  ],
+  "zanr": [
+    "klasicna knjizevnost"
+  ],
+  "izdavac": "Narodna biblioteka Srbije",
+  "godina": 1999,
+  "jezik": "srpski",
+  "slika": "anakarenjina.jpg",
+  "ocene": [],
+  "recenzije": [],
+  "zaduzenaOdStrane": [],
+  "rezervacije": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630f5ee7298653a0a82ae1a2"
+  },
+  "id": 13,
+  "naziv": "Hari Poter",
+  "autor": [
+    "J.K.Rovling"
+  ],
+  "zanr": [
+    "naucna fantastika"
+  ],
+  "izdavac": "Delfi",
+  "godina": 2005,
+  "jezik": "srpski",
+  "slika": "harrypotter.jpg",
+  "ocene": [],
+  "recenzije": [],
+  "zaduzenaOdStrane": [],
+  "rezervacije": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630f5ee8298653a0a82ae1a6"
+  },
+  "id": 14,
+  "naziv": "Na Drini ćuprija",
+  "autor": [
+    "Ivo Andrić"
+  ],
+  "zanr": [
+    "drama",
+    "klasicna knjizevnost"
+  ],
+  "izdavac": "Bigz",
+  "godina": 1997,
+  "jezik": "srpski",
+  "slika": "nadrinicuprija.jpg",
+  "ocene": [],
+  "recenzije": [],
+  "zaduzenaOdStrane": [],
+  "rezervacije": [],
+  "__v": 0
+}]

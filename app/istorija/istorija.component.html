@@ -1,0 +1,55 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a routerLink="/"><p class="naslov">Biblioteka</p></a>
+                <nav>
+                    <ul id="meni">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+    
+                        <li *ngIf="ulogovan" id="promenalozinke"><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan" id="zahtev"><a routerLink="/zahtev">Zahtev za dodavanje nove knjige</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil" ><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}" class="profilna"></a>
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+        
+    </header>
+    <div class="istorija">
+        <div class="naziv"> Knjige koje ste pročitali:</div>
+            <table class="tabelica">
+                <thead>
+                <tr>
+                    <th>Naziv knjige</th>
+                    <th >Autori</th>
+                    <th >Datum zaduživanja</th>
+                    <th >Datum vraćanja</th>
+                    <th></th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tableData">
+                
+            </tbody>
+            
+            </table>
+        
+    </div>
+    <div class="divsortiraj">
+    Sortiraj:<select [(ngModel)]="sortiraj" class="sortiraj" id="sort">
+        <option value="naziv">po nazivu</option>
+  <option value="autor">po autoru</option>
+  <option value="datumz">po datumu zaduzivanja</option>
+  <option value="datumv" >po datumu vracanja</option>
+  
+    </select>
+    <button (click)="sortirajTabelu()">sortiraj</button>
+</div>
+</body>

@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    height: 50px;
+    background-color: white;
+    border-radius: 8px;
+
+}
+
+.container {
+    width: 100%;
+
+    min-height: 100vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.naslov {
+    width: 100px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.profilna {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top:0px;
+}
+
+.menuicon {
+    margin-top: 5px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: rgb(164, 117, 223);
+    cursor: pointer;
+}
+
+.red {
+    margin-top: 10px;
+    min-height: 150px;
+    background-color: red;
+}
+
+.profile-pic-div {
+    height: 130px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    border: 1px solid grey;
+    margin-left: 20px;
+
+}
+
+#photo {
+    height: 100%;
+    width: 100%;
+}
+.kontejner{
+    height:680px;
+    margin-top: 20px;
+    margin-left:20px;
+    padding-top: 10px;
+    border-radius: 8px;
+    width:300px;
+    background-color: #b4c8f4b7;
+}
+.podnaslov{
+    background-color: #32027b;
+   
+color:rgba(255, 255, 255, 0.832);
+letter-spacing: 5px;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.labela{
+    font-size: small;
+    letter-spacing: 2px;
+    padding-left: 20px;
+    
+}
+.kontejner input{
+    margin-left: 20px;
+    width:250px;
+    height:30px;
+    border-radius: 5px;
+    border-color: #737579;
+    margin-bottom: 10px;
+}
+.kontejner select{
+    margin-left: 20px;
+    width:250px;
+    height:50px;
+    border-radius: 5px;
+    border-color: #737579;
+    margin-bottom: 10px;
+}
+.dugme{
+    margin-left: 120px;
+    background-color: #54db7d;
+    width:50px;
+    height:50px;
+    outline: #54db7d;
+    color:rgba(255,255,255, 0.7);
+    border-color: #54db7d;
+    border-style: inset;
+    border-radius: 8px;
+    font-size:2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+  .dugme:hover{
+    background-color: #32fd09;
+    
+    outline: #32fd09;
+    color:white;
+    border-color: #54db7d;
+    border-style: inset;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .poruka{
+background-color: #fc5c5c;
+margin-top: 10px;
+margin-left: 10px;
+margin-right:10px;
+text-align: center;
+display: none;
+  }
+  @media only screen and (max-width:700px){
+    .container{
+        width:100%;
+       
+        min-height: 100vh;
+        padding-left:3%;
+        padding-right: 3%;
+        padding-top: 0px;
+        box-sizing:border-box;
+        overflow: hidden;
+      
+       
+    }
+    header{
+        height: 40px;
+        margin-top: 1px;
+    }
+   nav ul{
+        width:100%;
+       display:none;
+        border-radius: 8px;
+        background: linear-gradient(#b48fff,#dfd5f8);
+        position:absolute;
+        top: 50px;
+        right:0;
+        z-index: 2;
+
+    }
+    nav ul li{
+        display:block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+    color: white;
+    }
+    .menuicon{
+        margin-top:2px;
+        width:40px;
+        cursor:pointer; 
+        display:block;
+    }
+    nav ul li a:hover{
+        color:rgb(164, 117, 223);
+        cursor: pointer;
+    }
+   
+   
+
+  }

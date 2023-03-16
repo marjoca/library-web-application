@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <p class="naslov">Biblioteka</p>
+                <nav>
+                    <ul id="meni">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+
+                        <li *ngIf="ulogovan" id="promenalozinke"><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan" id="zahtev"><a routerLink="/zahtev">Zahtev za dodavanje nove knjige</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil"><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}"
+                        class="profilna"></a>
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="container1" *ngIf="ulogovan">
+        <div class="knjigadana">
+            <p>Knjiga dana</p>
+        </div>
+
+        <div class="slikadanadiv">
+            <img class="slikadana" *ngIf="knjigaDana" src="\assets\profilneslike\{{knjigaDana.slika}}">
+        </div>
+        <div class="opisknjigedana" *ngIf="knjigaDana">naziv: {{knjigaDana.naziv}}</div>
+        <div class="opisknjigedana" *ngIf="knjigaDana">autor: {{knjigaDana.autor}}</div>
+        <div class="opisknjigedana">ocena: {{prosecnaOcena}}</div>
+    </div>
+    <div class="slajder" *ngIf="!ulogovan" >
+        <div class="knjigadana">Top 3 knjige</div>
+        <img class="top3knjige" src="/assets/profilneslike/{{sveKnjige[0].slika}}">
+        <img class="top3knjige"   src="/assets/profilneslike/{{sveKnjige[1].slika}}">
+        <img class="top3knjige"  src="/assets/profilneslike/{{sveKnjige[2].slika}}">
+        <button class="w3-button w3-display-left" (click)="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" (click)="plusDivs(+1)">&#10095;</button>
+
+    </div>
+    <div class="obavestenja" *ngIf="ulogovan">
+        <div class="knjigadana">
+            <p>Obaveštenja</p>
+        </div>
+        <div class="obavestenje" *ngIf="daLiIsticeRok()"> Ističe vam rok za vraćanje knjige!</div>
+        <div class="obavestenje" *ngIf="daLiJeIstekaoRok()"> Istekao vam je rok za vraćanje knjige!</div>
+        <div class="obavestenje" *ngIf="daLiImaMaxZaduzenih()"> Imate maksimalan broj zaduženih knjiga!</div>
+        <div class="obavestenje" *ngIf="daLiJeBlokiran()">Blokirani ste od strane administratora!</div>
+        <div class="obavestenje" *ngIf="daLiImaOdobrenihPredloga()">Dodata je knjiga {{prijavljeniKor.odobreniPredlozi}}</div>
+        <div class="obavestenje" *ngIf="daLiImaOdobrenihRezervacija()">Knjiga koju ste rezervisali je u zaduženim knjigama</div>
+    </div>
+</body>

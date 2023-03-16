@@ -1,0 +1,39 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a routerLink="/"> <p class="naslov">Biblioteka</p></a>
+                <nav>
+                    <ul id="meni">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+
+                        <li *ngIf="ulogovan"><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/zahtev">Zahtev za dodavanje nove knjige</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil"><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}"
+                        class="profilna"></a>
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+
+    </header>
+    <div class="kontejner">
+        <div class="labelica">Unesite staru lozinku</div>
+       <div class="lozinka"><input type="password" placeholder="unesite staru lozinku..." [(ngModel)]="staralozinka"></div>
+       <div class="labelica">Unesite novu lozinku</div>
+       <div class="lozinka"><input type="password" placeholder="unesite novu lozinku..." [(ngModel)]="novaPrviPut"></div>
+       <div class="labelica">Ponovo unesite novu lozinku</div>
+       <div class="lozinka"><input type="password" placeholder="ponovo unesite novu lozinku..." [(ngModel)]="novaDrugiPut"></div>
+       <div class="poruka" id="stara">Neispravna stara lozinka!</div>
+       <div class="poruka" id="format">Lozinka nije u odgovarajućem formatu!</div>
+       <div class="poruka" id="nisuiste">Lozinke nisu iste!</div>
+       <button class="dugme"(click)="promeniLozinku()">promeni lozinku</button>
+    </div>
+
+    </body>

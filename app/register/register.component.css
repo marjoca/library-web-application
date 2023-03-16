@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    height: 50px;
+    background-color: white;
+    border-radius: 8px;
+width:100%;
+line-height: 50px;
+}
+
+.container {
+    width: 100%;
+
+    min-height: 100vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.naslov {
+    width: 100px;
+    font-size: 20px;
+    cursor: pointer;
+color:black;
+}
+
+
+
+.menuicon {
+    margin-top: 5px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: rgb(164, 117, 223);
+    cursor: pointer;
+}
+
+form{
+    background-color: rgba(255, 255, 255, 0.841);
+    width:380px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 20px;
+padding-bottom: 20px;   
+    margin-top: 20px;
+    border-radius:8px;
+    box-shadow:20px 20px 30px rgba(0,0, 0, 0,15)
+}
+label{
+    font-weight:500;
+    color:#101030;
+
+
+}
+input{
+    display:block;
+    width:90%;
+    margin-top:5px;
+    padding:12px;
+    border-radius:5px;
+    outline:none;
+    color:#101010;
+}
+#password{
+    margin-bottom: 30px;
+}
+input[type="password"]{
+    border:2px solid #c2c2c2
+}
+input[type="text"]{
+    border:2px solid #c2c2c2
+}
+input[type="button"]{
+    background-color: #7f3fff;
+    border:none;
+    color:#ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor:pointer;
+    margin-top: 20px;
+    width:100%;
+}
+p{
+    font-size: 14px;
+   /* margin:15px 0;*/
+    display:inline-block;
+    color: #ffffff;
+    padding:5px 20px;
+}
+
+
+.registracija{
+    color: #ffffff;
+    background-color:rgba(161,135, 196, 0.5);
+    height: 20px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 18px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+.profile-pic-div{
+    height: 100px;
+    width:100px;
+   
+    top: 50%;
+    left: 50%;
+   
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid grey;
+    float:left;
+    width: 40%;
+    
+    
+   
+}
+
+#photo{
+    height: 100%;
+    width: 100%;
+}
+.poravnatnadesno{
+
+    width: 60%;
+    float: left;
+   
+    
+}
+.poslat{
+    background-color:#1fe940;
+    color:#ffffffc2;
+    font-size: small;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    height:25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display:none;
+   
+}
+.greska{
+    background-color:#b52d6d;
+    color:#ffffffc2;
+    font-size: small;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    height:25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display:none;
+    margin-top: 10px;
+}
+.ograda{
+    display: block;
+    width:100%;
+}
+@media only screen and (max-width:700px){
+    .container{
+        width:100%;
+       
+        min-height: 100vh;
+        padding-left:3%;
+        padding-right: 3%;
+        padding-top: 0px;
+        box-sizing:border-box;
+        overflow: hidden;
+      margin-right: 0px;
+       margin-left: 0px;
+    }
+    header{
+        height: 40px;
+        /*margin-top: 1px;*/
+        width: 100%;
+    }
+   nav ul{
+        width:100%;
+       display:none;
+        border-radius: 8px;
+        background: linear-gradient(#b48fff,#dfd5f8);
+        position:absolute;
+        top: 50px;
+        right:0;
+        z-index: 2;
+  
+    }
+    nav ul li{
+        display:block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+    color: white;
+    }
+    .menuicon{
+        margin-top:0px;
+        width:30px;
+        cursor:pointer; 
+        display:block;
+    }
+    nav ul li a:hover{
+        color:rgb(164, 117, 223);
+        cursor: pointer;
+    }
+    form{
+        background-color: rgba(255, 255, 255, 0.841);
+        width:300px;
+       padding-left: 20px;
+       padding-right: 20px;
+       padding-top: 20px;
+    padding-bottom: 20px;   
+        margin-top: 20px;
+        border-radius:8px;
+        box-shadow:20px 20px 30px rgba(0,0, 0, 0,15)
+    }
+  
+    
+  
+    
+  
+    
+  }
+
+
+

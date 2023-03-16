@@ -1,0 +1,107 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+               <a routerLink="/"><p class="naslov">Biblioteka</p></a>
+                <nav>
+                    <ul id="meni" *ngIf="!admin">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+    
+                        <li *ngIf="ulogovan" id="promenalozinke"><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan" id="zahtev"><a routerLink="/zahtev">Zahtev za dodavanje nove knjige</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil" ><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}" class="profilna"></a>
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+        
+    </header>
+
+
+<div class="container1">
+    <img class="profilnaslika" src="\assets\profilneslike\{{azuriraj.slika}}" id="photo" id="photo">
+    <input type="file" accept="image/*" id="file" (change)="dodajSliku($event)" name="file">
+    <button class="dugmekamerica" (click)="submit()">📷</button>
+    <div class="labelica">korisničko ime:</div>
+    <div class="opisprofila">
+        
+        <div class="nepromenljivo">{{azuriraj.korime}}</div>
+        
+    </div>
+    <div class="labelica">ime:</div>
+    <div class="opisprofila">
+        
+        <input class="inputzapromenu"  type="text" placeholder="{{azuriraj.ime}}" [(ngModel)]="novoIme">
+        <button class="dugmezapromenu" (click)="promeniime()">&#9998;</button>
+    </div>
+    <div class="labelica">prezime:</div>
+    <div class="opisprofila">
+        
+        <input class="inputzapromenu"  type="text" placeholder="{{azuriraj.prezime}}" [(ngModel)]="novoPrezime">
+        <button class="dugmezapromenu" (click)="promeniprezime()">&#9998;</button>
+    </div>
+    <div class="labelica">adresa:</div>
+    <div class="opisprofila">
+        
+        <input class="inputzapromenu"  type="text" placeholder="{{azuriraj.adresa}}" [(ngModel)]="novaAdresa">
+        <button class="dugmezapromenu" (click)="promeniadresu()">&#9998;</button>
+    </div>
+    <div class="labelica">email:</div>
+    <div class="opisprofila">
+        
+        <div class="nepromenljivo">{{azuriraj.email}}</div>
+        
+    </div>
+    <div class="labelica">broj telefona:</div>
+    <div class="opisprofila">
+        
+        <input class="inputzapromenu"  type="text" placeholder="{{azuriraj.telefon}}" [(ngModel)]="novTelefon">
+        <button class="dugmezapromenu" (click)="promenitelefon()">&#9998;</button>
+    </div>
+    <div class="labelica" *ngIf="admin">zaduženja:</div>
+    <div class="tabelica" *ngIf="admin">
+        <table >
+            <tr>
+                <th>zaduženo</th>
+                
+                <th>rok za vraćanje</th>
+                <th>obriši zaduženje</th>
+                <th>produži rok</th>
+            </tr>
+            <tr *ngFor="let z of azuriraj.zaduzenja">
+                <td>{{z.naziv}}</td>
+                
+                <td>{{z.rok}}</td>
+                <td><button class="ukloni" (click)="obrisiZaduzenje(z)">&#x2715;</button></td>
+                <td><button class="produzi" (click)="produziRok(z)">&#11014;&#11015;</button></td>
+            </tr>
+        </table>
+        <div class="labelica">tip:</div>
+        <div class="opisprofila">
+           
+            <div class="nepromenljivo">{{azuriraj.tip}}</div>
+            <button class="podigni" (click)="podigni()">&#11014;</button>
+            <button class="podigni" (click)="smanji()">&#11015;</button>
+        </div>
+        <div class="labelica">blokiraj / odblokiraj</div>
+        <div class="opisprofila">
+           
+            <div class="nepromenljivo">{{azuriraj.status}}</div>
+            <button class="block" (click)="blokiraj()">block</button>
+            <button class="unblock" (click)="odblokiraj()">unblock</button>
+        </div>
+    </div>
+</div>
+<div class="divChart" *ngIf="!admin">
+    <canvas id="canvas"></canvas>
+</div>
+<div class="divChart" *ngIf="!admin">
+    <canvas id="canvas2"></canvas>
+</div>
+</body>

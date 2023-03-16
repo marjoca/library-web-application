@@ -1,0 +1,59 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <p class="naslov">Biblioteka</p>
+                <nav>
+                    <ul id="meni">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+                        <li *ngIf="ulogovan"><a>Promeni lozinku</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregledzahteva">Pregled zahteva</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil"><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}"
+                        class="profilna"></a>
+               
+                
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+        
+    </header>
+    <div class="kontejner">
+      <div class="podnaslov">Pregled zahteva za knjige</div>
+      <table>
+      
+        <tr>
+            <th>Korisničko ime</th>
+            <th>Naziv</th>
+            <th>Autor</th>
+            <th>Žanr</th>
+            <th>Izdavač</th>
+            <th>Godina izdavanja</th>
+            <th>Jezik</th>
+            <th>Slika</th>
+            <th></th>
+            
+        </tr>
+        <tr *ngFor="let z of zahtevi" >
+            <td *ngIf="z">{{z.korime}}</td>
+            <td *ngIf="z">{{z.naziv}}</td>
+            <td *ngIf="z">{{z.autor}}</td>
+            <td *ngIf="z">{{z.zanr}}</td>
+           <td *ngIf="z">{{z.izdavac}}</td>
+           <td *ngIf="z">{{z.godina}}</td>
+           <td *ngIf="z">{{z.jezik}}</td>
+           <td><div class="profilna"><img src="\assets\profilneslike\{{z.slika}}"  id="photo"></div></td>
+            <td *ngIf="z">
+                <button class="prihvati" (click)="prihvatiZahtev(z)">odobri</button>
+                <button class="odbij" (click)="odbijZahtev(z)">odbij</button>
+            </td>
+        </tr>
+        </table>
+        <p class="message"id="message"></p>
+    </div>

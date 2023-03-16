@@ -1,0 +1,85 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <p class="naslov">Biblioteka</p>
+                <nav>
+                    <ul id="meni">
+                        
+
+                        <li><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li ><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+
+    </header>
+<div class="container1">
+    <img src="\assets\profilneslike\{{knjiga.slika}}" id="photo" id="photo">
+    <input type="file" accept="image/*" id="file" (change)="dodajSliku($event)" name="file">
+    <button class="dugmekamerica" (click)="promenisliku()">📷</button>
+    <div class="labelica">naziv knjige:</div>
+    <div class="opisprofila">
+
+        <input class="inputzapromenu" type="text" placeholder="{{knjiga.naziv}}" [(ngModel)]="novNaziv">
+        <button class="dugmezapromenu" (click)="promeninaziv()">&#9998;</button>
+
+    </div>
+    <div class="labelica">autori:</div>
+    <div class="opisprofila">
+
+        <input class="inputzapromenu" type="text" placeholder="{{knjiga.autor}}" [(ngModel)]="novAutor">
+        <button class="dugmezapromenu" (click)="promeniautora()">&#9998;</button>
+    </div>
+    <div class="labelica">žanr:</div>
+    <div class="opisprofila">
+
+        <select [(ngModel)]="novZanr" multiple>
+            <option value="drama">drama</option>
+            <option value="naucna fantastika">naučna fantastika</option>
+            <option value="krimi roman">krimi roman</option>
+            <option value="detektivski roman">detektivski roman</option>
+            <option value="klasicna knjizevnost">klasična književnost</option>
+            <option value="tragedija">tragedija</option>
+            <option value="psihologija">psihologija</option>
+            <option value="biografija">biografija</option>
+            <option value="enciklopedija">enciklopedija</option>
+            <option value="horor">horor</option>
+            <option value="poezija">poezija</option>
+            <option value="triler">triler</option>
+            <option value="komedija">komedija</option>
+        </select>
+        <button class="dugmezapromenu" (click)="promenizanr()">&#9998;</button>
+    </div>
+    <div class="labelica">izdavač:</div>
+    <div class="opisprofila">
+
+        <input class="inputzapromenu" type="text" placeholder="{{knjiga.izdavac}}" [(ngModel)]="novIzdavac">
+        <button class="dugmezapromenu" (click)="promeniizdavaca()">&#9998;</button>
+    </div>
+    <div class="labelica">godina:</div>
+    <div class="opisprofila">
+
+        <input class="inputzapromenu" type="text" placeholder="{{knjiga.godina}}" [(ngModel)]="novaGodina">
+        <button class="dugmezapromenu" (click)="promenigodinu()">&#9998;</button>
+
+    </div>
+    <div class="labelica">jezik:</div>
+    <div class="opisprofila">
+
+        <input class="inputzapromenu" type="text" placeholder="{{knjiga.jezik}}" [(ngModel)]="novJezik">
+        <button class="dugmezapromenu" (click)="promenijezik()">&#9998;</button>
+    </div>
+    <div class="labelica">broj knjiga na stanju:</div>
+    <div class="opisprofila">
+
+        <input class="inputzapromenu" type="text" placeholder="{{knjiga.kolicina}}" [(ngModel)]="novaKolicina">
+        <button class="dugmezapromenu" (click)="promenikolicinu()">&#9998;</button>
+    </div>
+
+    <div class="poruka" id="poruka">Ne možete izabrati više od 3 žanra!</div>
+</div>
+</body>

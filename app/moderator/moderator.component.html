@@ -1,0 +1,67 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <p class="naslov">Biblioteka</p>
+                <nav>
+                    <ul id="meni">
+                        <li *ngIf="!ulogovan"><a routerLink="/login">Prijavi se</a></li>
+                        <li *ngIf="!ulogovan"><a routerLink="/registracija">Registruj se</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/promenilozinku">Promeni lozinku</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pretraga">Pretraga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregledzahteva">Pregled zahteva</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/pregled">Pregled zaduženih knjiga</a></li>
+                        <li *ngIf="ulogovan"><a routerLink="/istorija">Istorija zaduženja</a></li>
+                        <li *ngIf="ulogovan"><a (click)="logout()">Odjavi se</a></li>
+                    </ul>
+                </nav>
+                <a routerLink="/profil"><img *ngIf="ulogovan" src="\assets\profilneslike\{{prijavljeniKor.slika}}"
+                        class="profilna"></a>
+                <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+            </div>
+        </div>
+
+    </header>
+    <div class="kontejner">
+        <div class="podnaslov">Dodaj knjigu</div>
+        
+            <div class="labela">naziv knjige:</div>
+            <input type="text" placeholder="unesite naziv knjige" [(ngModel)]="naziv">
+            <div class="labela">autor/i:</div>
+            <input type="text" placeholder="unesite autore razdvojene zarezom" [(ngModel)]="autor">
+            <div class="labela">žanr:</div>
+            <select max="" [(ngModel)]="zanr" multiple>
+                <option value="drama">drama</option>
+                <option value="naucna fantastika">naučna fantastika</option>
+                <option value="krimi roman">krimi roman</option>
+                <option value="detektivski roman">detektivski roman</option>
+                <option value="klasicna knjizevnost">klasična književnost</option>
+                <option value="tragedija">tragedija</option>
+                <option value="psihologija">psihologija</option>
+                <option value="biografija">biografija</option>
+                <option value="enciklopedija">enciklopedija</option>
+                <option value="horor">horor</option>
+                <option value="poezija">poezija</option>
+                <option value="triler">triler</option>
+                <option value="komedija">komedija</option>
+            </select>
+            <div class="labela">izdavač:</div>
+            <input type="text" [(ngModel)]="izdavac" placeholder="unesite izdavača">
+            <div class="labela">godina:</div>
+            <input type="number" [(ngModel)]="godina" placeholder="unesite godinu">
+            <div class="labela">jezik:</div>
+            <input type="text" [(ngModel)]="jezik" placeholder="unesite jezik">
+            <div class="labela">unesite sliku korice knjige:</div>
+            <div class="profile-pic-div">
+
+                <img src="\assets\clip-art-book-16.jpg" id="photo" id="photo">
+
+            </div>
+            <div class="poravnatnadesno">
+                <input type="file" accept="image/*" id="file" (change)="dodajSliku($event)" name="file">
+
+            </div>
+            <button class="dugme" (click)="dodajKnjigu()">&#43;</button>
+        <div class="poruka" id="poruka">Ne možete izabrati više od 3 žanra!</div>
+    </div>
+</body>

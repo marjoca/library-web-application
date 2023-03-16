@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+header{
+    height:50px;
+    background-color: white;
+    border-radius: 8px;
+    
+}
+.container{
+    width:100%;
+   
+    min-height: 100vh;
+    padding-left:3%;
+    padding-right: 3%;
+    padding-top: 10px;
+    box-sizing:border-box;
+    overflow: hidden;
+  
+   
+}
+.navbar{
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+.naslov{
+    width:100px;
+    font-size:20px;
+    cursor:pointer;
+   
+}
+.profilna{
+    width:40px;
+    height: 40px;
+    cursor:pointer;
+    border-radius: 50%;
+    margin-top: 0px;
+}
+
+.menuicon{
+    margin-top:5px;
+    width:40px;
+    cursor:pointer; 
+    display:none;
+}
+nav{
+    flex:1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style:none;
+    display:inline-block;
+    margin-right:30px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#000;
+    font-size: 14px;
+}
+nav ul li a:hover{
+    color:rgb(164, 117, 223);
+    cursor: pointer;
+}
+.tabelica{
+    width:700px;
+}
+tbody{
+background-color: #ddd3f1;
+box-shadow: rgba(66, 63, 63, 0.35) 0px 5px 15px;
+}
+.tabelica th{
+    color:white;
+    background-color: #9cbeed;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: rgba(66, 63, 63, 0.35) 0px 5px 15px;
+}
+.naziv{
+    background-color: rgb(189, 214, 247);
+    width:700px;
+    padding-left: 20px;
+    border-radius: 8px;
+    height:50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+.sortiraj{
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor:pointer;
+    height: 30px;
+    box-shadow: rgba(66, 63, 63, 0.35) 0px 5px 15px;
+
+}
+.divsortiraj{
+    margin-top: 20px;
+    margin-left: 20px;
+    
+    
+}
+.divsortiraj button{
+    background-color:  rgb(189, 214, 247);
+    height:28px;
+    border-radius: 5px;
+    border-width: 0px;
+    width:60px;
+    box-shadow: rgba(66, 63, 63, 0.35) 0px 5px 15px;
+    cursor:pointer;
+
+}
+.divsortiraj button:hover{
+    background-color:  rgb(36, 105, 195);
+    height:28px;
+    border-radius: 5px;
+    border-width: 0.5px;
+    width:60px;
+    box-shadow: rgba(66, 63, 63, 0.35) 0px 5px 15px;
+    cursor:pointer;
+    letter-spacing: 1px;
+    
+}
+p{
+    font-size: 14px;
+   /* margin:15px 0;*/
+    display:inline-block;
+    /*color: #ffffff;*/
+    padding:5px 20px;
+}
+@media only screen and (max-width:700px){
+    .container{
+        width:100%;
+       
+        min-height: 100vh;
+        padding-left:3%;
+        padding-right: 3%;
+        padding-top: 0px;
+        box-sizing:border-box;
+        overflow: hidden;
+      
+       
+    }
+    header{
+        height: 40px;
+        margin-top: 1px;
+    }
+    nav ul{
+        width:100%;
+       
+        border-radius: 8px;
+        background: linear-gradient(#b48fff,#dfd5f8);
+        position:absolute;
+        top: 50px;
+        right:0;
+        z-index: 2;
+
+    }
+    nav ul li{
+        display:block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+    color: white;
+    }
+    .menuicon{
+        margin-top:2px;
+        width:40px;
+        cursor:pointer; 
+        display:block;
+    }
+    nav ul li a:hover{
+        color:rgb(164, 117, 223);
+        cursor: pointer;
+    }
+    .inputpretraga{
+        margin-left: 0px;
+        border-radius: 8px;
+         height: 30px;
+         width:60%;
+     }
+     label{
+        font-size: small;
+     }
+     .dugmezapretragu{
+        width:13%;
+        color:white;
+        font-size: x-small;
+     }
+     .naprednapretraga{
+        min-height: 170px;
+        font-size: small;
+     }
+     thead th:not(:first-child) {
+        display: none;
+    }
+    td:first-child {
+        font-weight: bold;
+    }
+    td {
+        display: block;
+        width: 100%;
+    }
+th{
+    display:none;
+}
+    td[data-th]:before  {
+        content: attr(data-th);
+    border-radius: 10px 0px 0px 10px;
+    font-weight: bold;
+    
+    display: inline-block;
+    }
+}

@@ -1,0 +1,92 @@
+<body>
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <a routerLink="/"> <p class="naslov">Biblioteka</p></a>
+        <nav>
+          <ul id="meni">
+            <li><a routerLink="/login">Prijavi se</a></li>
+            <li><a routerLink="/registracija">Registruj se</a></li>
+
+          </ul>
+        </nav>
+
+        <img src="/assets/icon-menu-png-19.jpg" class="menuicon" (click)="prikaziMeni()">
+      </div>
+    </div>
+
+  </header>
+
+  <form>
+    <div class="registracija">
+
+      Registracija
+    </div>
+    <div>
+      <label for="username">Korisničko ime:</label>
+      <input type="text" name="username" placeholder="Unesite korisničko ime" [(ngModel)]="username">
+
+    </div>
+    <div>
+      <label for="password">Lozinka:</label>
+      <input type="password" name="password" placeholder="Unesite lozinku" [(ngModel)]="password">
+
+    </div>
+    <div>
+      <label for="confirmedpassword">Ponovo unesite lozinku:</label>
+      <input type="password" name="confirmedPassword" placeholder="Ponovo unesite lozinku"
+        [(ngModel)]="confirmedPassword">
+
+    </div>
+    <div>
+      <label for="name">Ime:</label>
+      <input type="text" name="name" placeholder="Unesite ime" [(ngModel)]="name">
+
+    </div>
+    <div>
+      <label for="surname">Prezime:</label>
+      <input type="text" name="surname" placeholder="Unesite prezime" [(ngModel)]="surname">
+
+    </div>
+    <div>
+      <label for="address">Adresa:</label>
+      <input type="text" name="address" placeholder="Unesite adresu" [(ngModel)]="address">
+
+    </div>
+    <div>
+      <label for="telephone">Telefon:</label>
+      <input type="text" name="telephone" placeholder="Unesite telefon" [(ngModel)]="telephone">
+
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="text" name="email" placeholder="Unesite email" [(ngModel)]="email">
+
+    </div>
+    <label for="image">Profilna slika:</label>
+    <div>
+
+      <div class="profile-pic-div">
+
+        <img src="\assets\image (1).jpg" id="photo" id="photo">
+
+      </div>
+      <div class="poravnatnadesno">
+        <input type="file" accept=".png,.jpg" id="file" (change)="dodajSliku($event)" name="file">
+
+      </div>
+    </div>
+   
+   
+    <div>
+      <input type="button" value="Registruj se" (click)="registrujse()">
+    </div>
+    <div class="ograda">
+      <div id="message" class="poslat">Poslat je zahtev za registraciju!</div>
+      <div id="message1" class="greska">Lozinka nije odgovarajućeg formata!</div>
+      <div id="message2" class="greska">Ovo korisničko ime je zauzeto!</div>
+      <div id="message3" class="greska">Postoji korisnik sa ovom email adresom!</div>
+      <div id="message4" class="greska">Lozinke se ne podudaraju!</div>
+    </div>
+  </form>
+</body>

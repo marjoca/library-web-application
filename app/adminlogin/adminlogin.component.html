@@ -1,0 +1,22 @@
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a routerLink="/"> <p class="naslov">Biblioteka</p></a>
+                
+               
+            </div>
+        </div>
+
+    </header>
+    <div class="kontejner">
+        <div class="labelica">Unesite korisničko ime</div>
+       <div class="lozinka"><input type="text" placeholder="unesite korisničko ime..." [(ngModel)]="username"></div>
+       <div class="labelica">Unesite lozinku</div>
+       <div class="lozinka"><input type="password" placeholder="unesite lozinku..." [(ngModel)]="password"></div>
+      
+       <div class="poruka" id="poruka">Neispravni podaci</div>
+      
+       <button class="dugme"(click)="login()">prijavi se</button>
+    </div>
+    </body>
